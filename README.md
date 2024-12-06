@@ -24,9 +24,9 @@ GitHub Action to automate the generation and update of Markdown documentation fr
       ```cd repo-name```
      
 - **In your README.md (or any desired file), insert the following markers where you want the documentation to appear:**
-  -```<!--doc_begin-->```
+    -```<!--doc_begin-->```
 
-   ```<!--doc_end-->```
+     ```<!--doc_end-->```
      
 - **Add pndurette/gh-actions-auto-docs to your workflow:**
 ```name: Generate Action Docs
@@ -37,10 +37,10 @@ jobs:
     permissions:
       contents: write
     steps:
-    - uses: actions/checkout@v3
+    uses: actions/checkout@v3
       with:
         ref: ${{ github.event.pull_request.head.ref }}
-    - uses: pndurette/gh-actions-auto-docs@v1```
+    uses: pndurette/gh-actions-auto-docs@v1```
     
 ## Usage Instructions
 -After installation, use the following commands to generate and update documentation:
